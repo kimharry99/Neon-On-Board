@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
 {
     private Vector3 direion, des;
     public float spd;
+    public GameObject pointer;
 
     protected bool moving = false;
 
@@ -25,7 +26,8 @@ public class Character : MonoBehaviour
     //direction은 단위벡터
     private void Move(Vector3 direction, Vector3 des)
     {
-        if (Vector3.Distance(des, transform.position) < 0.01f)
+        Debug.Log(Vector3.Distance(des, transform.position));
+        if (Vector3.Distance(des, transform.position) < 0.1f)
         {
             transform.position = new Vector3(des.x, des.y, des.z);
             moving = false;
@@ -41,5 +43,10 @@ public class Character : MonoBehaviour
         direion = _diretion;
         des =  _des;
         moving = true;
+    }
+
+    void OnMouseDown()
+    {
+        MyCharacterController.inst.ChooseCharacter(this.transform.GetComponent<Character>());
     }
 }

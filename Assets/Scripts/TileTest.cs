@@ -8,7 +8,6 @@ using UnityEngine.Tilemaps;
 public class TileTest : MonoBehaviour
 {
     public Tilemap tilemap;
-    public Camera camera;
 
     //마우스가 타일 위에 위치할 때만 작업할 것이기 때문에 onMouseOver를 사용했습니다.
 
@@ -20,7 +19,7 @@ public class TileTest : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Debug.DrawRay(ray.origin, ray.direction * 10, Color.blue, 3.5f);
-            Debug.Log(ray.direction);
+            //Debug.Log(ray.direction);
             //Debug.Log(Input.mousePosition);
 
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector3.zero);
@@ -41,7 +40,7 @@ public class TileTest : MonoBehaviour
                 tilemap.SetTileFlags(v3Int, TileFlags.None);
 
                 //타일 색 바꾸기
-                tilemap.SetColor(v3Int, (Color.red));
+                tilemap.SetColor(v3Int, (new Color(0.1f, 0, 0)));
             }
         }
         catch (NullReferenceException)
