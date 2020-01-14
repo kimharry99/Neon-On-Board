@@ -38,7 +38,7 @@ public class Map : MonoBehaviour
 
     void OnMouseExit()
     {
-        tilemap.RefreshAllTiles();
+        //tilemap.RefreshAllTiles();
     }
 
     private Vector3Int downTile;
