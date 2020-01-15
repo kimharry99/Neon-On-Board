@@ -26,7 +26,7 @@ public class Character : MonoBehaviour
     //direction은 단위벡터
     private void Move(Vector3 direction, Vector3 des)
     {
-        Debug.Log(Vector3.Distance(des, transform.position));
+        //Debug.Log(Vector3.Distance(des, transform.position));
         if (Vector3.Distance(des, transform.position) < 0.1f)
         {
             transform.position = new Vector3(des.x, des.y, des.z);

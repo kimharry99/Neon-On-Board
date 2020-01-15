@@ -13,8 +13,8 @@ public class MyCharacterController : SingletonBehaviour<MyCharacterController>
     {
         if(map.canGetTilePos)
         {
-            Debug.Log(map.tileWorldPos);
-            Debug.Log(character.transform.position);
+            //Debug.Log(map.tileWorldPos);
+            //Debug.Log(character.transform.position);
             character.StartMoing(Vector3.Normalize(new Vector3(map.tileWorldPos.x, map.tileWorldPos.y + 0.6f) - character.transform.position), 
                 new Vector3(map.tileWorldPos.x, map.tileWorldPos.y + 0.6f, character.transform.position.z));
             map.canGetTilePos = false;

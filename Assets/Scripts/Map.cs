@@ -65,6 +65,7 @@ public class Map : MonoBehaviour
             y = tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)).y;
 
             Vector3Int upTile = new Vector3Int(x, y, 0);
+            Debug.Log(upTile);
             if (upTile == downTile)
             {
                 tileWorldPos = tilemap.CellToWorld(downTile);
