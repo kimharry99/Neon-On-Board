@@ -330,10 +330,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2881534820257404021, guid: c236c546b25ac2046907f24513123119,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
         type: 3}
       propertyPath: spd
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
+        type: 3}
+      propertyPath: _id
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c236c546b25ac2046907f24513123119, type: 3}
@@ -474,12 +484,17 @@ PrefabInstance:
     - target: {fileID: 2881534820257404021, guid: c236c546b25ac2046907f24513123119,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
         type: 3}
       propertyPath: spd
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
+        type: 3}
+      propertyPath: _id
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c236c546b25ac2046907f24513123119, type: 3}
@@ -729,12 +744,17 @@ PrefabInstance:
     - target: {fileID: 2881534820257404021, guid: c236c546b25ac2046907f24513123119,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
         type: 3}
       propertyPath: spd
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
+        type: 3}
+      propertyPath: _id
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7000339387534789799, guid: c236c546b25ac2046907f24513123119,
         type: 3}
@@ -813,7 +833,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 790169936}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b047760ca365124f8ef6a55f279bb30, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ee945c7bfa84114faba57ebee4dddec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 886171783}
@@ -1885,6 +1905,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8f73d10aaf9f74b81170ee77671d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tileMaxX: 21
+  tileMaxY: 4
   canGetTilePos: 0
   tileWorldPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &914378087
@@ -1992,12 +2014,17 @@ PrefabInstance:
     - target: {fileID: 2881534820257404021, guid: c236c546b25ac2046907f24513123119,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
         type: 3}
       propertyPath: spd
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
+        type: 3}
+      propertyPath: _id
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c236c546b25ac2046907f24513123119, type: 3}
@@ -2106,12 +2133,17 @@ PrefabInstance:
     - target: {fileID: 2881534820257404021, guid: c236c546b25ac2046907f24513123119,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
         type: 3}
       propertyPath: spd
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309183466824461052, guid: c236c546b25ac2046907f24513123119,
+        type: 3}
+      propertyPath: _id
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c236c546b25ac2046907f24513123119, type: 3}
@@ -2145,6 +2177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
+  stageManager: {fileID: 790169938}
 --- !u!4 &1156600857
 Transform:
   m_ObjectHideFlags: 0

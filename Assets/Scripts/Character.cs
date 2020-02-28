@@ -5,6 +5,12 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     private Vector3 direion, des;
+    [SerializeField]
+    private int _id;
+    public int Id
+    {
+        get { return _id; }
+    }
     public float spd;
     public GameObject pointer;
 
@@ -47,6 +53,6 @@ public class Character : MonoBehaviour
 
     void OnMouseDown()
     {
-        MyCharacterController.inst.ChooseCharacter(this.transform.GetComponent<Character>());
+        GameManager.inst.stageManager.SelectCharacter(this.transform.GetComponent<Character>());
     }
 }

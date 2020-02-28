@@ -1,23 +1,35 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Map : MonoBehaviour
 {
+    [SerializeField]
+    private int tileMaxX, tileMaxY;
+    private List<List<int>> isCharacterList = new List<List<int>>();
     private Tilemap tilemap;
     public bool canGetTilePos = false;
     public Vector3 tileWorldPos;
 
     void Start()
     {
+        for(int i=0;i<tileMaxX;i++)
+        {
+            isCharacterList.Add(new List<int>());
+            for(int j=0;j<tileMaxY;j++)
+            {
+                isCharacterList[i].Add(0);
+            }
+        }
         tilemap = this.transform.GetComponent<Tilemap>();
     }
 
     #region mouse function
     void OnMouseOver()
     {
-        if(MyCharacterController.inst.IsCharSelected())
+        if(GameManager.inst.stageManager.IsCharSelected())
         {
             tilemap.RefreshAllTiles();
             int x, y;
@@ -45,7 +57,7 @@ public class Map : MonoBehaviour
     private bool toCheckUp = false;
     void OnMouseDown()
     {
-        if (MyCharacterController.inst.IsCharSelected())
+        if (GameManager.inst.stageManager.IsCharSelected())
         {
             int x, y;
             x = tilemap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition)).x;
@@ -75,4 +87,6 @@ public class Map : MonoBehaviour
         toCheckUp = false;
     }
     #endregion
+    
+
 }
